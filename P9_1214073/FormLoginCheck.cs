@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
+using P9_1214073.controller;
 
 namespace P9_1214073
 {
@@ -18,6 +19,8 @@ namespace P9_1214073
         private string database;
         private string uid;
         private string password;
+        CekLogin login1 = new CekLogin();
+
         public FormLoginCheck()
         {
             server = "localhost";
@@ -134,6 +137,32 @@ namespace P9_1214073
         private void FormLoginCheck_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtusername.Text == "" || txtpaswot.Text == "")
+            {
+                MessageBox.Show("Username dan Password tidak boleh kosong !!!!");
+            }
+            else
+            {
+                string username = txtusername.Text;
+                string password = txtpaswot.Text;
+
+                bool status = login1.cek_login1(username, password);
+                if (status)
+                {
+                    MessageBox.Show("Login Berhasil", "Berhasil");
+                    parentform pform = new parentform();
+                    pform.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal Login", "Gagal");
+                }
+            }
         }
     }
 }

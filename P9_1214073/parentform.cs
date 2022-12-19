@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P9_1214073.view;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,9 +30,7 @@ namespace P9_1214073
 
         private void dataMahasiswaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form1 newulbi = new Form1();
-            newulbi.MdiParent = this;
-            newulbi.Show();
+          
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +43,20 @@ namespace P9_1214073
             aboutme newAboutMe = new aboutme();
             newAboutMe.MdiParent = this;
             newAboutMe.Show();
+        }
+
+        private void inputNilaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nilai newnilai = new Nilai();
+            newnilai.MdiParent = this;
+            newnilai.Show();
+        }
+
+        private void dataMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 newulbi = new Form1();
+            newulbi.MdiParent = this;
+            newulbi.Show();
         }
     }
 }

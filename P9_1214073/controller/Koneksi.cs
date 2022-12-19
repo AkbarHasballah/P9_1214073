@@ -4,7 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySqlConnector;
+using MySql.Data.MySqlClient;
+
 
 namespace P9_1214073
 {
@@ -38,6 +39,14 @@ namespace P9_1214073
             adapter.Fill(data);
             object datatable = data.Tables[0];
             return datatable;
+        }
+
+        internal MySqlDataReader reader(string v)
+        {
+            // throw new NotImplementedException();
+            MySqlCommand cmd = new MySqlCommand(v, kon);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            return reader;
         }
     }
 }

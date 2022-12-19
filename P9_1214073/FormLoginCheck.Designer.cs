@@ -34,6 +34,7 @@
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpaswot = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,13 +85,25 @@
             // 
             // login
             // 
+            this.login.Enabled = false;
             this.login.Location = new System.Drawing.Point(217, 210);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(75, 23);
             this.login.TabIndex = 5;
             this.login.Text = "Login";
             this.login.UseVisualStyleBackColor = true;
+            this.login.Visible = false;
             this.login.Click += new System.EventHandler(this.login_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(217, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Cek Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormLoginCheck
             // 
@@ -98,6 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(329, 342);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.login);
             this.Controls.Add(this.txtpaswot);
             this.Controls.Add(this.txtusername);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpaswot;
         private System.Windows.Forms.Button login;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(parentform));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataMahasiswaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inputNilaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataMahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -42,6 +44,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.dataMasterToolStripMenuItem,
+            this.dataTransaksiToolStripMenuItem,
             this.dataMahasiswaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -52,18 +56,10 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataMahasiswaToolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // dataMahasiswaToolStripMenuItem1
-            // 
-            this.dataMahasiswaToolStripMenuItem1.Name = "dataMahasiswaToolStripMenuItem1";
-            this.dataMahasiswaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.dataMahasiswaToolStripMenuItem1.Text = "Data Mahasiswa";
-            this.dataMahasiswaToolStripMenuItem1.Click += new System.EventHandler(this.dataMahasiswaToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -71,6 +67,28 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // dataMasterToolStripMenuItem
+            // 
+            this.dataMasterToolStripMenuItem.Name = "dataMasterToolStripMenuItem";
+            this.dataMasterToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.dataMasterToolStripMenuItem.Text = "Data Master";
+            this.dataMasterToolStripMenuItem.Click += new System.EventHandler(this.dataMasterToolStripMenuItem_Click);
+            // 
+            // dataTransaksiToolStripMenuItem
+            // 
+            this.dataTransaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inputNilaiToolStripMenuItem});
+            this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
+            this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.dataTransaksiToolStripMenuItem.Text = "Data Transaksi";
+            // 
+            // inputNilaiToolStripMenuItem
+            // 
+            this.inputNilaiToolStripMenuItem.Name = "inputNilaiToolStripMenuItem";
+            this.inputNilaiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inputNilaiToolStripMenuItem.Text = "Input Nilai";
+            this.inputNilaiToolStripMenuItem.Click += new System.EventHandler(this.inputNilaiToolStripMenuItem_Click);
             // 
             // dataMahasiswaToolStripMenuItem
             // 
@@ -84,7 +102,7 @@
             // aboutMeToolStripMenuItem
             // 
             this.aboutMeToolStripMenuItem.Name = "aboutMeToolStripMenuItem";
-            this.aboutMeToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.aboutMeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutMeToolStripMenuItem.Text = "About Me";
             this.aboutMeToolStripMenuItem.Click += new System.EventHandler(this.aboutMeToolStripMenuItem_Click);
             // 
@@ -112,8 +130,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataMahasiswaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataMahasiswaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inputNilaiToolStripMenuItem;
     }
 }
