@@ -93,8 +93,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutme.Designer.cs">
+      <DependentUpon>aboutme.cs</DependentUpon>
+    </Compile>
     <Compile Include="controller\Mahasiswa.cs" />
+    <Compile Include="FormLoginCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginCheck.Designer.cs">
+      <DependentUpon>FormLoginCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\M_mahasiswa.cs" />
+    <Compile Include="parentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parentform.Designer.cs">
+      <DependentUpon>parentform.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +122,15 @@
     <Compile Include="controller\Koneksi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="aboutme.resx">
+      <DependentUpon>aboutme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginCheck.resx">
+      <DependentUpon>FormLoginCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parentform.resx">
+      <DependentUpon>parentform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
