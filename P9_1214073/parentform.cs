@@ -58,5 +58,20 @@ namespace P9_1214073
             newulbi.MdiParent = this;
             newulbi.Show();
         }
+
+        private void dataMasterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parentform_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -99,22 +99,32 @@
     <Compile Include="aboutme.Designer.cs">
       <DependentUpon>aboutme.cs</DependentUpon>
     </Compile>
+    <Compile Include="controller\BarangCheck.cs" />
     <Compile Include="controller\CekLogin.cs" />
     <Compile Include="controller\Mahasiswa.cs" />
     <Compile Include="controller\Nilai1.cs" />
+    <Compile Include="controller\Transaksicheck.cs" />
     <Compile Include="FormLoginCheck.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLoginCheck.Designer.cs">
       <DependentUpon>FormLoginCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\M_barang.cs" />
     <Compile Include="model\M_mahasiswa.cs" />
     <Compile Include="model\M_Nilai.cs" />
+    <Compile Include="model\M_transaksi.cs" />
     <Compile Include="parentform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="parentform.Designer.cs">
       <DependentUpon>parentform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Barang.Designer.cs">
+      <DependentUpon>Barang.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
@@ -125,11 +135,23 @@
     <Compile Include="controller\Koneksi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\FstartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FstartUp.Designer.cs">
+      <DependentUpon>FstartUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Nilai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\Nilai.Designer.cs">
       <DependentUpon>Nilai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Transaksi_Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Transaksi_Barang.Designer.cs">
+      <DependentUpon>Transaksi_Barang.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="aboutme.resx">
       <DependentUpon>aboutme.cs</DependentUpon>
@@ -139,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="parentform.resx">
       <DependentUpon>parentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Barang.resx">
+      <DependentUpon>Barang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -152,8 +177,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\FstartUp.resx">
+      <DependentUpon>FstartUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Nilai.resx">
       <DependentUpon>Nilai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Transaksi_Barang.resx">
+      <DependentUpon>Transaksi_Barang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

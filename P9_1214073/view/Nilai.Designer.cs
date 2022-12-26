@@ -42,10 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbnpm = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tbnama = new System.Windows.Forms.TextBox();
+            this.tbnilai = new System.Windows.Forms.TextBox();
             this.cbmatkul = new System.Windows.Forms.ComboBox();
             this.cbkategori = new System.Windows.Forms.ComboBox();
-            this.tbnilai = new System.Windows.Forms.TextBox();
-            this.tbnama = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataNilai)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,7 +55,7 @@
             // 
             // tbCariData
             // 
-            this.tbCariData.Location = new System.Drawing.Point(494, 412);
+            this.tbCariData.Location = new System.Drawing.Point(494, 397);
             this.tbCariData.Name = "tbCariData";
             this.tbCariData.Size = new System.Drawing.Size(120, 20);
             this.tbCariData.TabIndex = 6;
@@ -199,6 +200,20 @@
             this.groupBox3.Text = "Form Input Nilai Check";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // tbnama
+            // 
+            this.tbnama.Location = new System.Drawing.Point(254, 99);
+            this.tbnama.Name = "tbnama";
+            this.tbnama.Size = new System.Drawing.Size(120, 20);
+            this.tbnama.TabIndex = 7;
+            // 
+            // tbnilai
+            // 
+            this.tbnilai.Location = new System.Drawing.Point(94, 130);
+            this.tbnilai.Name = "tbnilai";
+            this.tbnilai.Size = new System.Drawing.Size(120, 20);
+            this.tbnilai.TabIndex = 7;
+            // 
             // cbmatkul
             // 
             this.cbmatkul.FormattingEnabled = true;
@@ -227,25 +242,23 @@
             this.cbkategori.Size = new System.Drawing.Size(220, 21);
             this.cbkategori.TabIndex = 11;
             // 
-            // tbnilai
+            // button1
             // 
-            this.tbnilai.Location = new System.Drawing.Point(94, 130);
-            this.tbnilai.Name = "tbnilai";
-            this.tbnilai.Size = new System.Drawing.Size(120, 20);
-            this.tbnilai.TabIndex = 7;
-            // 
-            // tbnama
-            // 
-            this.tbnama.Location = new System.Drawing.Point(254, 99);
-            this.tbnama.Name = "tbnama";
-            this.tbnama.Size = new System.Drawing.Size(120, 20);
-            this.tbnama.TabIndex = 7;
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(542, 423);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Export To excel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Nilai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbCariData);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -283,5 +296,6 @@
         private System.Windows.Forms.ComboBox cbkategori;
         private System.Windows.Forms.TextBox tbnama;
         private System.Windows.Forms.TextBox tbnilai;
+        private System.Windows.Forms.Button button1;
     }
 }

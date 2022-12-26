@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -171,6 +172,54 @@ namespace P9_1214073.view
             }
             reader.Close();
             koneksi.CloseConnection();
+        }
+        private void tbnama_selectedIndexChanged (object sender, EventArgs e)
+        {
+            GetNamaMhs();
+        }
+        private void ExportExcel(DataGridView dataGrid, string searchData)
+        {
+            string Output = "";
+            string Headers = "";
+
+            // export judul
+            for (int j = 0; j < dataGrid.ColumnCount; j++)
+            {
+                Headers = Headers.ToString() + Convert.ToString(dataGrid.Columns[j].HeaderText) + "\t";
+            }
+            Output += Headers + "\r\n";
+
+            // Export data 
+            for (int i = 0; i < dataGrid.RowCount; i++)
+            {
+                string Line = "";
+                for (int j = 0; j < dataGrid.Rows[i].Cells.Count; j++)
+                {
+                    Line = Line.ToString() + Convert.ToString(dataGrid.Rows[i].Cells[j].Value) + "\t";
+                }
+                Output += Line + "\r\n";
+            }
+            Encoding encoding = Encoding.GetEncoding(12345);
+            // array tipe byte
+            byte[] outputs = encoding.GetBytes(Output);
+            FileStream file = new FileStream(searchData, FileMode.Create);
+            BinaryWriter binary = new BinaryWriter(file);
+
+            binary.Write(outputs, 0, outputs.Length);
+            binary.Flush();
+            binary.Close();
+            file.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel Documents ( *.xls)| *xsl";
+            save.FileName = "Report Nilai.xls";
+            if (save.ShowDialog () == DialogResult.OK)
+            {
+                ExportExcel(dataNilai, save.FileName);
+            }
         }
     }
 }

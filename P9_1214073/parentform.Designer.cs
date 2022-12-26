@@ -37,6 +37,9 @@
             this.inputNilaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataMahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataMasterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataMasterBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataTransaksiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,12 +49,14 @@
             this.fileToolStripMenuItem,
             this.dataMasterToolStripMenuItem,
             this.dataTransaksiToolStripMenuItem,
-            this.dataMahasiswaToolStripMenuItem});
+            this.dataMahasiswaToolStripMenuItem,
+            this.dataMasterToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -64,7 +69,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -86,7 +91,7 @@
             // inputNilaiToolStripMenuItem
             // 
             this.inputNilaiToolStripMenuItem.Name = "inputNilaiToolStripMenuItem";
-            this.inputNilaiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inputNilaiToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.inputNilaiToolStripMenuItem.Text = "Input Nilai";
             this.inputNilaiToolStripMenuItem.Click += new System.EventHandler(this.inputNilaiToolStripMenuItem_Click);
             // 
@@ -102,9 +107,31 @@
             // aboutMeToolStripMenuItem
             // 
             this.aboutMeToolStripMenuItem.Name = "aboutMeToolStripMenuItem";
-            this.aboutMeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutMeToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.aboutMeToolStripMenuItem.Text = "About Me";
             this.aboutMeToolStripMenuItem.Click += new System.EventHandler(this.aboutMeToolStripMenuItem_Click);
+            // 
+            // dataMasterToolStripMenuItem1
+            // 
+            this.dataMasterToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataMasterBarangToolStripMenuItem,
+            this.dataTransaksiToolStripMenuItem1});
+            this.dataMasterToolStripMenuItem1.Name = "dataMasterToolStripMenuItem1";
+            this.dataMasterToolStripMenuItem1.Size = new System.Drawing.Size(122, 20);
+            this.dataMasterToolStripMenuItem1.Text = "Tugas Praktikum 11";
+            this.dataMasterToolStripMenuItem1.Click += new System.EventHandler(this.dataMasterToolStripMenuItem1_Click);
+            // 
+            // dataMasterBarangToolStripMenuItem
+            // 
+            this.dataMasterBarangToolStripMenuItem.Name = "dataMasterBarangToolStripMenuItem";
+            this.dataMasterBarangToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.dataMasterBarangToolStripMenuItem.Text = "Data Master Barang";
+            // 
+            // dataTransaksiToolStripMenuItem1
+            // 
+            this.dataTransaksiToolStripMenuItem1.Name = "dataTransaksiToolStripMenuItem1";
+            this.dataTransaksiToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
+            this.dataTransaksiToolStripMenuItem1.Text = "Data Transaksi";
             // 
             // parentform
             // 
@@ -117,6 +144,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "parentform";
             this.Text = "parentform";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.parentform_FormClosed);
             this.Load += new System.EventHandler(this.parentform_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -135,5 +163,8 @@
         private System.Windows.Forms.ToolStripMenuItem dataMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inputNilaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataMasterToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dataMasterBarangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem1;
     }
 }

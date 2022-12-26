@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -159,6 +160,18 @@ namespace P9_1214073
             txtnohp.Text = "";
             Tampil();
            
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+       
+       
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
